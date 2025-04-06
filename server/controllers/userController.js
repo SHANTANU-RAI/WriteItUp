@@ -1,5 +1,6 @@
 const Post = require('../models/Post');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 exports.home = async (req, res) => {
   try {
@@ -85,15 +86,15 @@ exports.contactPost = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'shantanu.r0503@gmail.com',
-        pass: 'ppex grav dsck ywxg',
+        user: process.env.MY_EMAIL,
+        pass: process.env.EMAIL_PASS
       }
     });
 
     const mailOptions = {
-      from: 'shantanu.r0503@gmail.com',
+      from: process.env.MY_EMAIL,
+      to: process.env.MY_EMAIL,
       replyTo: email,
-      to: 'shantanu.r0503@gmail.com',
       subject: `New message from ${name}`,
       text: `You received a new message from your blog contact form:\n\nName: ${name}\nEmail: ${email}\nMessage:\n${message}`
     };
