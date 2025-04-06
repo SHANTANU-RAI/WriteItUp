@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+</head>
+<body style="background-color: #fdf6e3; font-family: Arial, sans-serif; color: #333; margin: 40px;">
+  <div style="max-width: 800px; margin: auto;">
+    <h1 style="text-align: center; color: #2c3e50;">Contact Us</h1>
+    <p style="font-size: 18px; line-height: 1.6;">
+      <strong>We’d love to hear from you!</strong><br><br>
+      Whether you have a question, feedback, collaboration idea, or just want to say hi — feel free to reach out.
+    </p>
+
+    <p style="font-size: 18px; line-height: 1.6;">
+      📧 <strong>Email:</strong> <a href="mailto:shantanu.r0503@gmail.com" style="color: #2c3e50;">shantanu.r0503@gmail.com</a><br>
+      📱 <strong>Social Media:</strong><br>
+      Instagram: <a href="https://www.instagram.com/__shan.rai__/" style="color: #2c3e50;">__shan.rai__</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/shantanu-rai0503/" style="color: #2c3e50;">Shantanu Rai</a>
+    </p>
+
+    <form method="POST" action="/user/contact" style="margin-top: 30px;">
+      <label for="name" style="font-size: 16px;">Your Name:</label><br>
+      <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+      <label for="email" style="font-size: 16px;">Your Email:</label><br>
+      <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+      <label for="message" style="font-size: 16px;">Your Message:</label><br>
+      <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px;"></textarea><br>
+
+      <button type="submit" class="btn" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        <strong>Send Message</strong>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
